@@ -1,0 +1,31 @@
+Port: 1337
+DatabaseConnectionString: Data Source=./data/LANCommander.db;Cache=Shared
+IGDBClientId: ''
+IGDBClientSecret: ''
+Theme: Dark
+Beacon:
+  Enabled: true
+  Address: ''
+Authentication:
+  RequireApproval: false
+  TokenSecret: 12345678-ffff-9876-1337-aaaaaaaaaaaa
+  TokenLifetime: 30
+  PasswordRequireNonAlphanumeric: false
+  PasswordRequireLowercase: false
+  PasswordRequireUppercase: false
+  PasswordRequireDigit: true
+  PasswordRequiredLength: 8 
+UserSaves:
+  StoragePath: ./data/Saves
+  MaxSize: 25
+Archives:
+  EnablePatching: false
+  StoragePath: ./data/Uploads
+Media:
+  SteamGridDbApiKey: ''
+  StoragePath: ./data/Media
+  MaxSize: 25
+IPXRelay:
+  Enabled: false
+  Port: 213
+  Logging: false
