@@ -11,10 +11,10 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list && \
     apt-get update && apt-get install nodejs -y 
 
-RUN cd /opt && git clone https://github.com/LANCommander/LANCommander.git && cd LANCommander && git checkout v0.2.2
+RUN cd /opt && git clone https://github.com/LANCommander/LANCommander.git && cd LANCommander && git checkout v0.1.3
 WORKDIR /opt/LANCommander
 RUN dotnet restore && cd LANCommander/wwwroot/scripts && npm install && cd /opt/LANCommander && \
-    dotnet build "./LANCommander/LANCommander.csproj" --no-restore /p:Version="0.0.1" && \
+    dotnet build "./LANCommander/LANCommander.csproj" --no-restore /p:Version="0.1.3" && \
     dotnet publish "./LANCommander/LANCommander.csproj" -c Release -o _Build --self-contained --os linux -p:PublishSignleFile=true && \
     mkdir _Build/data
 
