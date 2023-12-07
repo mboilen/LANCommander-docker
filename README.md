@@ -3,7 +3,7 @@ Repo to start [LANCommander](https://github.com/LANCommander/LANCommander) on Li
 
 ## Build the image
 ```bash
-docker build . -t lancommander:0.1.3
+docker build . -t lancommander:0.3.1
 ```
 
 ## Configure LANCommander
@@ -11,11 +11,8 @@ Please change `Settings.yml` according to your needs.
 
 ## Run the image
 ```
-docker run -it -p 1337:1337 -v ${PWD}/Settings.yml:/opt/LANCommander/Settings.yml -v ${PWD}/data:/opt/LANCommander/data lancommander:0.1.3
+docker run -it -p 1337:1337 -v ${PWD}/Settings.yml:/opt/LANCommander/Settings.yml -v ${PWD}/data:/opt/LANCommander/data lancommander:0.3.1
 ```
 
 ## Get to the UI
 After starting the game browse to `http://localhost:1337/`.  
-After setting your initial password you have to change to `http://localhost:1337/Games` to get starting, the dashboard doesn't currently work on Linux. The rest is working pretty well.  
-
-The newer 0.2.x version isn't yet compatible with Linux though. Therefore we are sticking with the latest 0.1.x version.
